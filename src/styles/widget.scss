@@ -1,0 +1,30 @@
+.widget-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .widget-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .widget-content {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .add-widget-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-widget-btn:hover {
+    background-color: #0056b3;
+  }

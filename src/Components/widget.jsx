@@ -1,8 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { removeWidget } from '../Store/widgetControl'
+import '../styles/widget.scss'
 
-const Widget = ({widget, categoryId}) => {
+export const Widget = ({widget, categoryId}) => {
     const dispatch = useDispatch()
 
     const handleRemove = () => {
@@ -11,11 +12,11 @@ const Widget = ({widget, categoryId}) => {
 
   return (
     <div>
-      <h3>{widget.name}</h3>
-      <p>{widget.text}</p>
-      <button onClick={handleRemove}>Remove Widget</button>
+      <h3 className="widget-title">{widget.name}</h3>
+      <p className="widget-content">{widget.text}</p>
+      <button className="add-widget-btn" onClick={handleRemove}>Remove Widget</button>
     </div>
   )
 }
 
-export default Widget
+

@@ -2,22 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   categories: [
-    {
-      id: 1,
-      name: "Exclusive Dashboard",
-      widgets: [
-        {
-          id: 1,
-          name: "Widget 1",
-          text: "Random text 1",
-        },
-        {
-          id: 2,
-          name: "Widget 2",
-          text: "Random text 2",
-        },
-      ],
-    },
   ],
 };
 
@@ -39,9 +23,20 @@ const widgetSlice = createSlice({
             if (category){
                 category.widgets = category.widgets.filter(widget=> widget.id !== widgetId)
             }
+        },
+        addCategory:(state,action)=>{
+          const newCategory = {
+            id:Date.now(),
+            name:action.payload,
+            widgets:[],
+          }
+          state.categories.push(newCategory)
+        },
+        removeCategory:(state,action)=>{
+          state.categories = state.categories.filter(cat => cat.id !== action.payload)
         }
     }
 })
 
-export const {addWidget,removeWidget} = widgetSlice.actions;
+export const {addWidget,removeWidget, addCategory, removeCategory} = widgetSlice.actions;
 export default widgetSlice.reducer 
