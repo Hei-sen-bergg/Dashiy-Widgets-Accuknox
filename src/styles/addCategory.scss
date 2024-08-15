@@ -1,0 +1,35 @@
+.add-category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 5px; 
+    margin-top: 20px; 
+  
+  
+  .add-category-form {
+    display: flex;
+    align-items: center; 
+    gap: 7px; 
+  }
+  
+  .add-category-input {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .add-category-button {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 24px; 
+    color: #ffffff; 
+  }
+  
+  .add-category-button:hover {
+    color: #00ff40; 
+  }
+}

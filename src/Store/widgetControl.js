@@ -2,8 +2,41 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   categories: [
-  ],
+    {
+      id: 2, 
+      name: "Project Management", 
+      widgets: [
+        {
+          id: 201, 
+          name: "Tasks Overview", 
+          text: "Total: 45, Completed: 30, In Progress: 10, Pending: 5", 
+        },
+        {
+          id: 202, 
+          name: "Team Members", 
+          text: "John Doe, Jane Smith, Mike Johnson, Emily Davis", 
+        },
+      ],
+    },
+    {
+      id: 3, 
+      name: "Marketing Campaigns", 
+      widgets: [
+        {
+          id: 301, 
+          name: "Campaign Performance", 
+          text: "Active: 3, Completed: 7, Planned: 5", 
+        },
+        {
+          id: 302, 
+          name: "Budget Overview", 
+          text: "Total Budget: $50,000, Spent: $35,000, Remaining: $15,000",
+        },
+      ],
+    },
+  ]  
 };
+
 
 
 const widgetSlice = createSlice({

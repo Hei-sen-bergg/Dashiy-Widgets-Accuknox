@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeCategory } from "../Store/widgetControl";
-import {Widget} from "./widget";
-import AddCategory from   "./addCategory";
+import { Widget } from "./widget";
+import AddCategory from "./addCategory";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import AddWidget from "./addWidget";
-import '../styles/dashboard.scss'
+import "../styles/dashboard.scss";
 
 const Dashboard = () => {
   const categories = useSelector((state) => state.widgets.categories);
@@ -31,36 +33,46 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <AddCategory />
+      <header className="header">
+        <h1 className="dashboard-title">Dashboard</h1>
+        <input
+          className="search-widget"
+          type="text"
+          value={search}
+          onChange={handleSearch}
+          placeholder="Search widgets..."
+        />
+      </header>
 
-      <input //to search widgets
-        type="text"
-        value={search}
-        onChange={handleSearch}
-        placeholder="Search widgets..."
-      />
+      {!search && <AddCategory />}
 
       {search ? (
         filteredWidgets.length > 0 ? (
-          filteredWidgets.map((widget) => (
+          <div className="widgets-row">
+          {filteredWidgets.map((widget) => (
             <Widget
               key={widget.id}
               categoryId={widget.categoryId}
               widget={widget}
             />
-          ))
+          ))}
+        </div>
+         
         ) : (
           <p>No widgets found.</p>
         )
       ) : (
         categories.map((category) => (
-          <div  className="category-title" key={category.id}>
-            <h3>{category.name}</h3>
-            <button onClick={() => handleRemoveCategory(category.id)}>
-              Remove Category
-            </button>
-            <AddWidget categoryId={category.id} />
-            <div className="widget-card">
+          <div className="category-container" key={category.id}>
+            <div className="category-header">
+              <h3 className="category-title">{category.name}</h3>
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="remove-category-icon"
+                onClick={() => handleRemoveCategory(category.id)}
+              />
+            </div>
+            <div className="widgets-row">
               {category.widgets.map((widget) => (
                 <Widget
                   key={widget.id}
@@ -68,6 +80,7 @@ const Dashboard = () => {
                   widget={widget}
                 />
               ))}
+              <AddWidget categoryId={category.id} />
             </div>
           </div>
         ))
