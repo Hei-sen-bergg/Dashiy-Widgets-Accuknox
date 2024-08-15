@@ -1,6 +1,8 @@
 
 # Dashiy-Widgets-Accuknox
 
+Live link of this project : https://dashiyapp.netlify.app
+
 Overview
 This project is a sample dashboard application featuring categories and related widgets.
 
@@ -41,6 +43,8 @@ Your feedback is invaluable. If you encounter any bugs or have suggestions for i
 Thank you for using this dashboard application.
 
 ![Dashiy](https://github.com/user-attachments/assets/d8078b6b-f77a-4c07-beb0-07b29a2d57d5)
+
+
 
 # React + Vite
 
