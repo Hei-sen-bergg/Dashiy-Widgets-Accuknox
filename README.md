@@ -18,20 +18,19 @@ To get the project up and running on your local machine, follow these steps:
 1.Clone the Repository
 
 (Clone the repository using one of the branches (main or master). The master branch contains the development work, while the main branch has the final output.)
-
 Copy code (repository-url)
 git clone <repository-url>
 Navigate to the Project Directory
 
-Change into the project directory:
+2.Change into the project directory:
 cd <project-directory>
 
 
-Install the necessary dependencies:
+3.Install the necessary dependencies:
 npm install
 
 
-Start the development server:
+4.Start the development server:
 npm run dev
 Your application will be available at http://localhost:5173 (or another port specified in the terminal).
 
