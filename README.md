@@ -45,7 +45,7 @@ npm run dev
 Your application will be available at http://localhost:5173 (or another port specified in the terminal).
 
 
-Feedback and Contributions
+
 Your feedback is invaluable. If you encounter any bugs or have suggestions for improvement, please share them. Contributions are welcome!
 
 
