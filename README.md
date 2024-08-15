@@ -7,6 +7,8 @@ Overview
 
 
 This project is a sample dashboard application featuring categories and related widgets.
+Functionalities include- 
+Users can create caterories, create widget in each categories, option to delete both caregories and widgets, search field implemented to search widgets by their name or content.
 
 
 
